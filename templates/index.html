@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jonart Olicia Portfolio">
+    <meta name="keywords"
+        content="personal, portfolio new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
+    <!-- PAGE TITLE -->
+    <title>Jonart Olicia Portfolio</title>
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename='assets/images/favicon.png')}}">
+    <!-- ALL GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/remixicon.css') }}">
+    <!-- MAGNIFIC CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <!-- NICE SELECT CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.min.css') }}">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}">
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slick.min.css') }}">
+    <!-- SPACING CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/spacing.css') }}">
+    <!-- MAIN STYLE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='assets/images/robot-bg.png') }}");
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- START PRELOADER AREA-->
+    <div class="preloader">
+        <svg viewbox="0 0 1000 1000" preserveaspectratio="none">
+            <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="preloader-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- END PRELOADER AREA -->
+
+    {% include 'layouts/header.html' %}
+    {% include 'layouts/about.html' %}
+    {% include 'layouts/education.html' %}
+    {% include 'layouts/skills.html' %}
+    {% include 'layouts/work.html' %}
+    {% include 'layouts/information.html' %}
+    {% include 'layouts/footer.html' %}
+
+    <!-- START SCROOL UP DESIGN AREA -->
+    <div class="progress-wrap cursor-pointer">
+        <i class="ri-arrow-up-double-line"></i>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- / END SCROOL UP DESIGN AREA -->
+    <!-- JQUERY JS -->
+    <script data-cfasync="false" src="{{ url_for('static', filename='assets/js/email-decode.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+    <!-- BOOTSTRAP JS-->
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <!-- APPEAR JS -->
+    <script src="{{ url_for('static', filename='assets/js/appear.min.js') }}"></script>
+    <!-- jquery smooth-scroll JS -->
+    <script src="{{ url_for('static', filename='assets/js/smooth-scroll.js') }}"></script>
+    <!-- GSAP JS -->
+    <script src="{{ url_for('static', filename='assets/js/gsap.min.js') }}"></script>
+    <!-- MAGNIFICANT JS -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- SLICK JS-->
+    <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+    <!-- NICE SELECT JS-->
+    <script src="{{ url_for('static', filename='assets/js/jquery.nice-select.min.js') }}"></script>
+    <!-- IMAGE LOADER JS-->
+    <script src="{{ url_for('static', filename='assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <!-- ISOTOPE JS-->
+    <script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <!--  WOW ANIMATION JS-->
+    <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/form-contact.js') }}"></script>
+    <!-- SCRIPT JS-->
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/download_cv.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/layout.js') }}"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"rayId":"928d35d78817f881","version":"2025.1.0","r":1,"token":"af32052a4af94682924748133ff6d4eb","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
