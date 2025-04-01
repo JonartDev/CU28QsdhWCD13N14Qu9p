@@ -1,30 +1,39 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
+# Ensure the "output" folder exists
+if not os.path.exists("output"):
+    os.makedirs("output")
+
 @app.route("/")
 def index():
-    return render_template("index.html")
+    html_content = render_template("index.html")
+    with open("output/index.html", "w") as f:
+        f.write(html_content)
+    return "Index page saved."
 
 @app.route("/about")
 def about():
-    return render_template("layouts/about.html")
+    html_content = render_template("layouts/about.html")
+    with open("output/about.html", "w") as f:
+        f.write(html_content)
+    return "About page saved."
 
 @app.route("/education")
 def education():
-    return render_template("layouts/education.html")
-
-@app.route("/skills")
-def skills():
-    return render_template("layouts/skills.html")
+    html_content = render_template("layouts/education.html")
+    with open("output/education.html", "w") as f:
+        f.write(html_content)
+    return "Education page saved."
 
 @app.route("/work")
 def work():
-    return render_template("layouts/work.html")
-    
-@app.route("/contact")
-def contact():
-    return render_template("layouts/contact.html")
+    html_content = render_template("layouts/work.html")
+    with open("output/work.html", "w") as f:
+        f.write(html_content)
+    return "Work page saved."
 
 if __name__ == "__main__":
     app.run(debug=True)
